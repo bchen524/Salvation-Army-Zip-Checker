@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>211 Salvation Army Connection Center Assistance - ZIP Code Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+      width: 80%;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h2>211 Salvation Army Connection Center Assistance - ZIP Code Checker</h2>
+  <input type="text" id="zipInput" placeholder="Client Zip Code">
+  <br>
+  <button onclick="checkZip()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    // Replace this array with your approved ZIP codes
+    const acceptedZips = [
+
+'84713',
+'84731',
+'84751',
+'84752',
+'84520',
+'84526',
+'84529',
+'84501',
+'84539',
+'84542',
+'84513',
+'84516',
+'84518',
+'84521',
+'84522',
+'84523',
+'85428',
+'84537',
+'84712',
+'84716',
+'84719',
+'84764',
+'84718',
+'84726',
+'84735',
+'84736',
+'84759',
+'84776',
+'84515',
+'84532',
+'84540',
+'84628',
+'84639',
+'84645',
+'84648',
+'84710',
+'84762',
+'84729',
+'84730',
+'84741',
+'84533',
+'84755',
+'84758',
+'84624',
+'84631',
+'84728',
+'84635',
+'84636',
+'84637',
+'84638',
+'84540',
+'84644',
+'84649',
+'84656',
+'84723',
+'84732',
+'84740',
+'84743',
+'84750',
+'84028',
+'84038',
+'84064',
+'80486',
+'84510',
+'84511',
+'84512',
+'84530',
+'84531',
+'84534',
+'84535',
+'84536',
+'84621',
+'84622',
+'84623',
+'84627',
+'84629',
+'84630',
+'84632',
+'84634',
+'84642',
+'84643',
+'84646',
+'84647',
+'84662',
+'84665',
+'84667',
+'84711',
+'84620',
+'84724',
+'84739',
+'84744',
+'84754',
+'84652',
+'84701',
+'84654',
+'84766',
+'84657',
+'84017',
+'84024',
+'84033',
+'84036',
+'84055',
+'84060',
+'84068',
+'84098',
+'84061',
+'84022',
+'84029',
+'84034',
+'84069',
+'84071',
+'84074',
+'84080',
+'84083',
+'84032',
+'84049',
+'84082',
+'84715',
+'84734',
+'84747',
+'84749',
+'84773',
+'84775',
+
+    ];
+
+    function checkZip() {
+      const zip = document.getElementById('zipInput').value.trim();
+      const result = document.getElementById('result');
+      
+      if (zip === '') {
+        result.textContent = 'Please enter a ZIP code.';
+        result.style.color = 'orange';
+        return;
+      }
+
+      if (acceptedZips.includes(zip)) {
+        result.textContent = '✅ VALID ZIP CODE';
+        result.style.color = 'green';
+      } else {
+        result.textContent = '❌ INVALID ZIP CODE';
+        result.style.color = 'red';
+      }
+    }
+  </script>
+</body>
+</html>
